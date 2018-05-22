@@ -1,0 +1,154 @@
+:root {
+  --spacing: 1px;
+}
+/* html tag is in code */    /* 54I-1 */
+/* head tag is in code */    /* 54I-2 */
+/* body tag is in code */    /* 54I-3 */
+/* script tag is in code */  /* 61C */
+
+div {                        /* 54C-3 */
+  border: 1px solid black;
+}
+h1 {                         /* 54F-1 */
+  color: blue;
+}
+h2 {                         /* 54F-2 */
+  color: green;
+}
+span {                       /* 54C-2 */
+  font-size: 20px;
+}
+.box-model {                 /* 54J */
+  background-color: red;
+  margin: 5px;               /* 24C */
+  border: 1px solid black; /* 24D */
+  padding: 5px;              /* 24E */
+  box-sizing: border-box;    /* 24F */
+  width: 100%;
+  color: white;
+}
+.Float-Display {
+  background-color: blue;
+  border: 1px solid black;
+  color: white;
+  display: block;            /* 25F */
+  float: left;               /* 25D */
+  position: fixed;           /* 25C-3 */
+  padding: var(--spacing);   /* 31C */
+}
+.Font-Background {
+  border: 1px solid black;
+  font-weight: bold;         /* 23D-1 */
+  color: white;            /* 23D-2 */
+  font-size: 10px;           /* 23D-3 */
+  background-color: green; /* 23E */
+  background-image: url("./images/background-image.png"); /* 23F and 22C-3 */
+  padding: 20px;
+}
+.Position {                  /* 22C-2 */
+  background-color: purple;
+  border: 1px solid black;
+  color: white;
+  position: relative;        /* 25C-1 */
+}
+#one {                       /* 22C-1 */
+  background-color: orange;
+  border: 1px solid black;
+  position: absolute;        /* 25C-2 */
+}
+.Position + p {
+  color: white;            /* 22C-5 */
+}
+div > p {                    /* 22C-4 */
+  font-size: 15px;
+}
+.fancy-effects {
+  box-shadow: 5px 10px #888888;               /* 30C */
+  background: linear-gradient(red, yellow); /* 30D */
+  text-overflow: ellipsis;
+  margin: 30px;
+  border: solid 2px blue;
+  white-space: nowrap;
+  text-overflow: ellipsis;                      /* 30E */
+  width: 100px;
+  display: block;
+  overflow: hidden
+}
+.img-spin {                                  /* 54E-2 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 110px;
+  height: 110px;
+  margin:-60px 0 0 -60px;
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
+  -webkit-transition: width 2s;
+  transition: width 2s;                      /* 28D */
+}
+@-moz-keyframes spin {
+  100% {-moz-transform: rotate(360deg);}
+}
+@-webkit-keyframes spin {
+  100% {-webkit-transform: rotate(360deg);}
+}
+@keyframes spin {                            /* 28C */
+  100% {-webkit-transform: rotate(360deg); 
+  transform:rotate(360deg);                  /* 28E */
+  }
+}
+.flexbox {
+  display: flex;                             /* 27G */
+	flex-direction: column;                    /* 27F */
+	flex-wrap: nowrap;                         /* 27E */
+	justify-content: center;                   /* 27C */
+	align-items: center;                       /* 27D */
+  align-content: center;
+  padding-top: 130px;
+}
+p {                                          /* 54C-1 */
+  background-color: green;
+}
+.grid {
+  display: grid;                             /* 31D */
+  grid-template-rows: repeat(4, 50px);
+  grid-gap: 1px;
+  color: white;
+}
+@media screen (max-width: 415px){           /* 29C and 29D */
+  .box-model {
+    width: 50px;
+  }
+  .Font-Background {
+    width: 50px;
+  }
+}
+.disable:disabled {                        /* 26E */
+  background: #ccc;
+}
+.foc:focus {                               /* 26G */
+  background-color:yellow;
+}
+.hov:hover {                               /* 26H */
+  background-color: red;
+}
+p:nth-child(2) {                           /* 26L */
+  background: rgba(211, 77, 77, 0.6);  
+}
+li {                                       /* 54E-1 */
+  font-size: 15px;
+}
+a {                                        /* 54H */
+  text-decoration: none;
+}
+article {                                  /* 54D-1 */
+  background-color: gray;
+}
+section {                                  /* 54D-2 */
+  background-color: lightgray;
+}
+/* self closing br placed between these */ /* 54G */
+footer {                                   /* 54D-3 */
+  background-color: lightcyan;
+}
